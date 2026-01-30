@@ -1,0 +1,42 @@
+model_name_or_path: Qwen/Qwen3-Coder-30B-A3B-Instruct
+flash_attn: fa2
+
+# GPU memory: 8 * 78GB
+do_train: true
+stage: sft
+finetuning_type: full # only support full for now
+dataset: fullstack-learn_round2_10k
+preprocessing_num_workers: 32
+cutoff_len: 131702
+is_openai_format: true
+
+
+# global batchsize = (8 // 2 // 4) * 8 = 8
+output_dir: outs/mca/qwen3_coder_30b_fullstack-learn_round2_10k
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 16
+num_train_epochs: 2
+learning_rate: 2e-5
+logging_steps: 1
+save_steps: 1000
+save_total_limit: 2
+warmup_ratio: 0.1
+lr_scheduler_type: cosine
+bf16: true
+report_to: wandb
+
+# mcore speed up
+tensor_model_parallel_size: 4
+pipeline_model_parallel_size: 4
+expert_model_parallel_size: 2
+sequence_parallel: true
+bias_activation_fusion: true
+apply_rope_fusion: true
+use_distributed_optimizer: true
+overlap_param_gather: true
+overlap_grad_reduce: true
+moe_grouped_gemm: true
+moe_token_dispatcher_type: alltoall
+recompute_granularity: full
+recompute_method: uniform
+recompute_num_layers: 1
