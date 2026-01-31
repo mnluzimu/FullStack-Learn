@@ -2,7 +2,7 @@
 
 ### Overview
 
-This is a repository for the two-round self-improvement SFT training described in the paper "FullStack-Agent: Enhancing Agentic Full-Stack Web Coding via Development-Oriented Testing and Repository Back-Translation". It is adapted from [Llama-Factory](https://github.com/hiyouga/LLaMAFactory).
+This is a repository for the two-round self-improvement SFT training described in the paper "FullStack-Agent: Enhancing Agentic Full-Stack Web Coding via Development-Oriented Testing and Repository Back-Translation". It is adapted from [Llama-Factory](https://github.com/hiyouga/LLaMAFactory). This repository only contains the SFT training code of the FullStack-Learn method, while the Repository Back-Translation and Repository Augmentation code is in the [FullStack-Dev](https://github.com/mnluzimu/FullStack-Dev) repository.
 
 ![method](assets/method.png)
 
