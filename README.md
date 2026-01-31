@@ -6,6 +6,12 @@ This is a repository for the two-round self-improvement SFT training described i
 
 ![method](assets/method.png)
 
+### Models
+
+| Model Name | Huggingface Link |
+|------------|------------------|
+| FullStack-Learn-LM-30B-A3B| [luzimu/FullStack-Learn-LM-30B-A3B](https://huggingface.co/luzimu/FullStack-Learn-LM-30B-A3B) |
+
 ### Installation
 
 Run the following commands:
