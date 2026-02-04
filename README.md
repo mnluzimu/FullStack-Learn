@@ -2,7 +2,7 @@
 
 ### Overview
 
-This is a repository for the two-round self-improvement SFT training described in the paper "FullStack-Agent: Enhancing Agentic Full-Stack Web Coding via Development-Oriented Testing and Repository Back-Translation". It is adapted from [Llama-Factory](https://github.com/hiyouga/LLaMAFactory). This repository only contains the SFT training code of the FullStack-Learn method, while the Repository Back-Translation and Repository Augmentation code is in the [FullStack-Dev](https://github.com/mnluzimu/FullStack-Dev) repository.
+This is a repository for the two-round self-improvement SFT training described in the paper ["FullStack-Agent: Enhancing Agentic Full-Stack Web Coding via Development-Oriented Testing and Repository Back-Translation"](https://arxiv.org/abs/2602.03798). It is adapted from [Llama-Factory](https://github.com/hiyouga/LLaMAFactory). This repository only contains the SFT training code of the FullStack-Learn method, while the Repository Back-Translation and Repository Augmentation code is in the [FullStack-Dev](https://github.com/mnluzimu/FullStack-Dev) repository.
 
 ![method](assets/method.png)
 
@@ -10,7 +10,7 @@ This is a repository for the two-round self-improvement SFT training described i
 
 | Model Name | Huggingface Link |
 |------------|------------------|
-| FullStack-Learn-LM-30B-A3B| [luzimu/FullStack-Learn-LM-30B-A3B](https://huggingface.co/luzimu/FullStack-Learn-LM-30B-A3B) |
+| FullStack-Learn-LM-30B-A3B| 🤗 [luzimu/FullStack-Learn-LM-30B-A3B](https://huggingface.co/luzimu/FullStack-Learn-LM-30B-A3B) |
 
 ### Installation
 
@@ -60,3 +60,18 @@ bash code/train/qwen3_coder_30b_fullstack-learn_round2_10k.sh
 Experimental results of the two rounds of training tested on with FullStack-Dev on FullStack-Bench are as follows:
 
 ![experiments](assets/experiments.png)
+
+### Cite
+If you find our project helpful, please cite:
+
+```
+@misc{lu2026fullstackagentenhancingagenticfullstack,
+      title={FullStack-Agent: Enhancing Agentic Full-Stack Web Coding via Development-Oriented Testing and Repository Back-Translation}, 
+      author={Zimu Lu and Houxing Ren and Yunqiao Yang and Ke Wang and Zhuofan Zong and Mingjie Zhan and Hongsheng Li},
+      year={2026},
+      eprint={2602.03798},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2602.03798}, 
+}
+```
